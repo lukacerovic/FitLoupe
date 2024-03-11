@@ -1,0 +1,2 @@
+ios/FitLoupe.xcarchive/dSYMs/FitLoupe.app.dSYM/Contents/Resources/DWARF/FitLoupe filter=lfs diff=lfs merge=lfs -text
+ios/FitLoupe.xcarchive/Products/Applications/FitLoupe.app/Frameworks/hermes.framework/hermes filter=lfs diff=lfs merge=lfs -text
