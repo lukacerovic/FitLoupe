@@ -1,15 +1,18 @@
 import React , { Component, useReducer, useEffect } from 'react'; 
 import { View, Text } from 'react-native'
 import firebase from 'firebase/compat/app';
-const firebaseConfig = {
-  apiKey: "AIzaSyBI2GYPXZvU22bYZHjAKYdgj-RFe4EkVJo",
-  authDomain: "fitloupe-demo.firebaseapp.com",
-  projectId: "fitloupe-demo",
-  storageBucket: "fitloupe-demo.appspot.com",
-  messagingSenderId: "691478807055",
-  appId: "1:691478807055:web:7c136d6df4cab4ad89197a",
-  measurementId: "G-LF7MBZ21QE"
-};
+import { firebaseConfig } from '@env';
+
+// Firebase .env value sets
+firebase.initializeApp({
+  apiKey: firebaseConfig.API_KEY,
+  authDomain: firebaseConfig.AUTH_DOMAIN,
+  projectId: firebaseConfig.PROJECT_ID,
+  storageBucket: firebaseConfig.STORAGE_BUCKET,
+  messagingSenderId: firebaseConfig.MESSAGING_SENDER_ID,
+  appId: firebaseConfig.APP_ID,
+  measurementId: firebaseConfig.MEASUREMENT_ID
+});
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './redux/reducers'
